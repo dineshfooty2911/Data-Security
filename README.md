@@ -181,18 +181,18 @@ The password policy is enforced during the initial account registration process 
 The implementation of a firm password policy and real-time feedback system greatly enhances the security of user accounts. By guiding users to create complex passwords and educating them about password best practices, the application reduces the likelihood of successful brute-force attacks and unauthorized access. This proactive approach contributes to maintaining a high level of data protection and user confidence in the application's security.
 
 ## Audit Trail Implementation:
-# AUDIT TRAIL IMPLEMENTATION
+
 
 *An audit trail was implemented to ensure accountability, traceability, and transparency within the application. The audit trail captures and records significant actions and events performed by users and the system, providing a detailed history of activities for later analysis, investigation, and compliance purposes.*
 
-## *Logged Actions:*
+### *Logged Actions:*
 - **User Registration:** When a new user registers an account, their registration details, timestamp, and IP address are recorded.
 - **User Login:** Every user login attempt is logged, along with the timestamp and IP address, whether successful or unsuccessful.
 - **Password Changes:** If a user changes their password, the change is recorded, along with the previous and new password details.
 - **Turf Booking:** When a user books a turf slot, the booking details, selected turf, slot time, and user information are logged.
 - **Security Breach Attempts:** Any suspicious or unauthorized attempts to breach security (such as SQL injection attempts) are recorded.
 
-## *Storage and Structure:*
+### *Storage and Structure:*
 - **Event ID:** A unique identifier for each event.
 - **Event Type:** Describes the type of event (e.g., registration, login, booking).
 - **Event Details:** Contains specific details about the event, such as user information, timestamps, and actions performed.
@@ -200,13 +200,13 @@ The implementation of a firm password policy and real-time feedback system great
 - **IP Address:** Captures the IP address from which the action was initiated.
 - **Timestamp:** Records the exact date and time when the event occurred.
 
-## *Logging Process:*
+### *Logging Process:*
 *The logging process is integrated into critical application points, where actions are performed or events take place. When one of these events occurs, the relevant details are extracted and formatted into a log entry. This log entry is then added to the audit trail database table. For example, when a user registers an account, the application extracts the user's registration details, including the username, timestamp, and IP address. This information is formatted into a log entry and stored in the audit trail table. Similar processes occur for other events.*
 
-## *Access and Analysis:*
+### *Access and Analysis:*
 *Access to the audit trail is typically restricted to authorized personnel responsible for monitoring and analyzing system activities. These individuals can query and analyze the audit trail to identify patterns, detect anomalies, investigate incidents, and ensure compliance with security policies.*
 
-## OUTCOME
+### Outcomes
 *By implementing an audit trail, the application maintains a comprehensive record of user interactions and system activities, promoting transparency, accountability, and the ability to respond effectively to security incidents or breaches.*
 
 
