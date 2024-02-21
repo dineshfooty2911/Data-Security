@@ -140,23 +140,22 @@ The attacker successfully registered a user account with the malicious payload a
 ## Sql injection prevention
 The application must implement proper input validation and use parameterized queries to mitigate this vulnerability. This approach separates user inputs from the query structure and prevents attackers from injecting malicious code. The application can ensure that user inputs are treated as data and not executable code.
 
-Steps to Rectify the Breach:
 Upon discovering the SQL injection vulnerability in our application, immediate actions were taken to address the security issue and prevent potential breaches. The following steps were implemented to rectify the vulnerability and enhance the security posture of the system:
-1.	Input Validation and Sanitization:
+1.	*Input Validation and Sanitization:*
 The first step involved revisiting the code responsible for processing user inputs. Input validation and sanitization mechanisms were implemented to ensure that user inputs are properly validated and sanitized before being used in SQL queries. This measure prevents malicious input from altering the query's behaviour.
-2.	Parameterized Queries:
+2.	*Parameterized Queries:*
 To prevent SQL injection attacks, parameterized queries were introduced. Instead of directly embedding user inputs into the query, parameterized queries separate user inputs from the query structure. This approach ensures that user inputs are treated as data, not executable code, effectively thwarting SQL injection attempts.
  
-3.	Escaping Special Characters:
+3.	*Escaping Special Characters:*
 Special characters that might be used for SQL injection, such as single quotes ('), were escaped or handled appropriately. This prevents attackers from injecting their SQL code into the query by manipulating input data.
 
-4.	Security Testing and Review:
+4.	*Security Testing and Review:*
 Rigorous security testing was conducted to identify and address any remaining vulnerabilities. Code reviews and vulnerability assessments ensured no other potential security loopholes existed.
 
-5.	Security Awareness Training:
+5.	*Security Awareness Training:*
 The development team received training on secure coding practices and common security vulnerabilities, including SQL injection. This awareness enables developers to write more secure code and recognize potential threats.
 
-6.	Regular Security Audits:
+6.	*Regular Security Audits:*
 A plan for regular security audits and assessments was established. This involves periodic checks to identify new vulnerabilities and ensure that security measures are consistently upheld.
 
 Outcome:
