@@ -80,7 +80,6 @@ The application implements an audit trail mechanism to track user actions. Each 
 
 
 ## Security Measures Implemented
-## Security Measures Implemented
 
 *User Authentication:*
 User authentication is a critical aspect of the application's security. It is handled through a secure login process using a username and password. Passwords are stored securely using cryptographic hashing and salting techniques to prevent exposure in case of a data breach.
@@ -125,22 +124,53 @@ In a hypothetical scenario, an attacker attempted to exploit the application's v
 
 **Attack Steps:**
 
-**Identifying Vulnerability:**
+*Identifying Vulnerability:*
 The attacker recognized that the application's registration form did not properly sanitize and validate user inputs before executing SQL queries. This made it susceptible to SQL injection attacks.
 
-**Injecting Malicious Code:**
+*Injecting Malicious Code:*
 The attacker crafted a malicious input during the registration process. Instead of providing valid registration details, they entered a carefully constructed payload in the username field. The payload was designed to manipulate the SQL query and gain unauthorized access.
 
-**Exploiting the Vulnerability:**
+*Exploiting the Vulnerability:*
 By entering ' OR '1'='1'; -- as the username, the attacker aimed to manipulate the SQL query to always evaluate to true, allowing them to log in without valid credentials.
 
 
 **Results:**
 The attacker successfully registered a user account with the malicious payload as the username. When attempting to log in using the manipulated payload, the application's SQL query mistakenly allowed the attacker to bypass authentication, granting them unauthorized access to the system.
 
+## Sql injection prevention
+The application must implement proper input validation and use parameterized queries to mitigate this vulnerability. This approach separates user inputs from the query structure and prevents attackers from injecting malicious code. The application can ensure that user inputs are treated as data and not executable code.
+
+Steps to Rectify the Breach:
+Upon discovering the SQL injection vulnerability in our application, immediate actions were taken to address the security issue and prevent potential breaches. The following steps were implemented to rectify the vulnerability and enhance the security posture of the system:
+1.	Input Validation and Sanitization:
+The first step involved revisiting the code responsible for processing user inputs. Input validation and sanitization mechanisms were implemented to ensure that user inputs are properly validated and sanitized before being used in SQL queries. This measure prevents malicious input from altering the query's behaviour.
+2.	Parameterized Queries:
+To prevent SQL injection attacks, parameterized queries were introduced. Instead of directly embedding user inputs into the query, parameterized queries separate user inputs from the query structure. This approach ensures that user inputs are treated as data, not executable code, effectively thwarting SQL injection attempts.
+ 
+3.	Escaping Special Characters:
+Special characters that might be used for SQL injection, such as single quotes ('), were escaped or handled appropriately. This prevents attackers from injecting their SQL code into the query by manipulating input data.
+
+4.	Security Testing and Review:
+Rigorous security testing was conducted to identify and address any remaining vulnerabilities. Code reviews and vulnerability assessments ensured no other potential security loopholes existed.
+
+5.	Security Awareness Training:
+The development team received training on secure coding practices and common security vulnerabilities, including SQL injection. This awareness enables developers to write more secure code and recognize potential threats.
+
+6.	Regular Security Audits:
+A plan for regular security audits and assessments was established. This involves periodic checks to identify new vulnerabilities and ensure that security measures are consistently upheld.
+
+Outcome:
+
+By implementing these steps, the SQL injection vulnerability was successfully mitigated. The application's security posture was significantly improved, and the risk of unauthorized access through SQL injection attacks was minimized. The rectification process addressed the immediate vulnerability and enhanced the overall security of the application, providing a safer environment for users and their data.
+
+
+## Password Policy Implementation
+## Audit Trail Implementation:
+
 
 ## Conclusion
-While developing this web application, we have achieved several significant milestones...
+ A functional web application was successfully developed, allowing users to register, log in, view available turfs, and book slots. The application provides a user-friendly interface for a seamless experience. Various security measures were implemented to safeguard user data and ensure the confidentiality and integrity of information. These measures include user authentication, data validation, and password policy enforcement. To enhance accountability and traceability, an audit trail feature was incorporated that logs user actions within the application. This helps in identifying any suspicious activities and maintaining data integrity.
 
-## Reflection
-Throughout the course of this project, we encountered several challenges...
+
+
+
