@@ -4,9 +4,6 @@
 1. [Introduction](#introduction)
 2. [Goals](#goals)
 3. [Objectives](#objectives)
-    1. [Creating the Web Application](#step-1-creating-the-web-application)
-    2. [Data Breaching](#step-2-data-breaching)
-    3. [Data Security](#step-3-data-security)
 4. [Techniques & Technologies Used](#techniques--technologies-used)
 5. [Project Overview](#project-overview)
 6. [Context and Significance](#context-and-significance)
@@ -17,12 +14,14 @@
 11. [Conclusion](#conclusion)
 12. [Reflection](#reflection)
 
-## Introduction
-This project aims to develop a web-based application that facilitates the management and booking of sports turfs...
-
+## IntroductionThis project aims to develop a web-based application that facilitates the management and booking of sports turfs. The project aims to provide an intuitive platform for users to register, log in, view available turfs, book time slots, and manage their bookings. The project emphasizes not only functional aspects but also robust security measures to ensure the integrity of user data and system functionality.
 ## Goals
-- Develop a user-friendly web application...
-- Implement secure user authentication...
+- Develop a user-friendly web application for turf management and booking.
+- Implement secure user authentication and password policies to safeguard user accounts.
+- Create a secure environment that prevents unauthorized access and data breaches.
+-
+-
+-
 
 ## Objectives
 
