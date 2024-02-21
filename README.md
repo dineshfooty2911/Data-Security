@@ -1,4 +1,4 @@
-# Sports Turf Management and Booking Web Application
+# Data Security Implementation in a Web Application
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -15,7 +15,7 @@
 12. [Reflection](#reflection)
 
 ## Introduction
-This project aims to develop a web-based application that facilitates the management and booking of sports turfs...
+This project aims to develop a web-based application that facilitates the management and booking of sports turfs. The project aims to provide an intuitive platform for users to register, log in, view available turfs, book time slots, and manage their bookings. The project emphasizes not only functional aspects but also robust security measures to ensure the integrity of user data and system functionality.
 
 ## Goals
 - Develop a user-friendly web application for turf management and booking.
