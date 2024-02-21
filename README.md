@@ -57,26 +57,87 @@ In today's digital age, web applications have become integral to our daily lives
 ## Project Architecture
 The Sports Turf Management and Booking System is built using a client-server architecture, incorporating various technologies to ensure a seamless and secure user experience. The architecture consists of three main components: the client interface, the server, and the database.
 
-Client Interface:
+*Client Interface:*
 The client interface is the application's front end that users interact with. It is developed using HTML, CSS, and JavaScript. The interface allows users to register, log in, search for available turfs, and book slots. The user inputs are validated in real-time to ensure data integrity and security. Additionally, password policy constraints are enforced during password creation.
 
-Server:
+*Server:*
 The server is the application's core and is responsible for handling client requests, processing data, and interacting with the database. It is implemented using Node.js and Express.js. The server includes APIs for user registration, login, fetching available turfs, and booking slots. It enforces security measures such as input validation, parameterized queries, and protection against SQL injection.
 
-Database:
+*Database:*
 The database stores user information, turf details, and booking records. It is implemented using MySQL. The database design includes user, owner, turf, and booking tables. The relationship between owners and turfs is established through foreign keys. This architecture ensures data consistency, integrity, and proper access control.
 
 
 ## Workflow
-User Registration and Login:
-Users register by providing a username and password...
+
+*User Registration and Login:*
+Users register by providing a username and password. Password policies are enforced during registration. Upon successful registration, user data is stored in the database. During login, the server validates the user's credentials and provides access to the dashboard.
+
+*Dashboard and Turf Booking:*
+Upon logging in, users are directed to the dashboard to view available turfs. The server fetches turf data from the database and sends it to the client. Users can book available slots for a selected turf. The server validates the booking request and updates the database accordingly.
+
+*Audit Trail:*
+The application implements an audit trail mechanism to track user actions. Each action, such as registration, login, and booking, is logged with a timestamp and associated user information. This provides an accountability trail and aids in detecting any unauthorized activities.
+
 
 ## Security Measures Implemented
-User Authentication:
-User authentication is a critical aspect of the application's security...
+## Security Measures Implemented
+
+*User Authentication:*
+User authentication is a critical aspect of the application's security. It is handled through a secure login process using a username and password. Passwords are stored securely using cryptographic hashing and salting techniques to prevent exposure in case of a data breach.
+
+*Password Policies:*
+Password policies are enforced during registration to ensure that users create strong passwords. These policies require passwords to have a minimum length and include a mix of uppercase and lowercase letters, numbers, and special characters. Feedback is provided to users in real-time to guide them in creating compliant passwords.
+
+*Data Validation and Sanitization:*
+All user inputs, including registration fields and login credentials, are thoroughly validated, and sanitized to prevent malicious code injection, such as SQL injection and cross-site scripting (XSS) attacks. This ensures that only safe and expected data reaches the server.
+
+*Parameterized Queries:*
+All database queries are constructed using parameterized queries to prevent SQL injection attacks. This approach separates user inputs from the query structure, eliminating the risk of unintended SQL execution.
+
+*Secure Communication:*
+Communication between the client and server is secured using HTTPS. This encryption prevents eavesdropping and data interception by unauthorized entities during transit.
+
+*Audit Trail:*
+An audit trail is implemented to maintain a log of user activities and system actions. Each log entry includes a timestamp, user information, and the action performed. This helps in identifying any suspicious or unauthorized activities.
+
+*Error Handling:*
+Comprehensive error handling is in place to ensure that sensitive error messages are not exposed to users. Generic error messages are displayed to users, while detailed error messages are logged on the server for debugging purposes.
+
+*Access Control:*
+The application follows the principle of least privilege, ensuring that users have access only to the functionalities they are authorized to use. Authorization checks are performed for actions like booking slots and viewing turfs.
+
+*Session Management:*
+User sessions are managed securely with session tokens and expiration mechanisms. This prevents session hijacking and unauthorized access to user accounts.
+
+*Database Security:*
+Database access is restricted to the application server, and strong, unique passwords for database accounts are enforced. Additionally, regular backups are taken to ensure data recovery in case of any security incidents.
+
+*Regular Updates and Patch Management:*
+The application's software components, libraries, and frameworks are regularly updated to include the latest security patches and fixes.
+ By implementing these security measures, the application ensures user data's confidentiality, integrity, and availability. User authentication, data validation, secure communication, and access controls collectively contribute to the robust security posture of the system, safeguarding user information and maintaining user trust.
 
 ## Data Breaching and Security
-For educational purposes, a controlled security breach was performed to demonstrate a common vulnerability: SQL injection...
+For educational purposes, a controlled security breach was performed to demonstrate a common vulnerability: SQL injection. This breach aimed to showcase how an attacker can manipulate user inputs to gain unauthorized access to the database.
+
+
+**Description:**
+In a hypothetical scenario, an attacker attempted to exploit the application's vulnerability in the user registration process. The vulnerability allowed the attacker to manipulate the SQL query executed on the database, potentially gaining unauthorized access to sensitive data.
+
+**Attack Steps:**
+
+**Identifying Vulnerability:**
+The attacker recognized that the application's registration form did not properly sanitize and validate user inputs before executing SQL queries. This made it susceptible to SQL injection attacks.
+
+**Injecting Malicious Code:**
+The attacker crafted a malicious input during the registration process. Instead of providing valid registration details, they entered a carefully constructed payload in the username field. The payload was designed to manipulate the SQL query and gain unauthorized access.
+
+**Exploiting the Vulnerability:**
+By entering ' OR '1'='1'; -- as the username, the attacker aimed to manipulate the SQL query to always evaluate to true, allowing them to log in without valid credentials.
+
+
+**Results:**
+The attacker successfully registered a user account with the malicious payload as the username. When attempting to log in using the manipulated payload, the application's SQL query mistakenly allowed the attacker to bypass authentication, granting them unauthorized access to the system.
+
 
 ## Conclusion
 While developing this web application, we have achieved several significant milestones...
