@@ -169,13 +169,14 @@ To enhance the security of user accounts and prevent weak password usage, a comp
 **Password Requirements:**
 
 The password policy enforces the following requirements for user passwords:
--Minimum Length: Passwords must be at least 8 characters, ensuring adequate complexity.
--Complexity: Passwords must include a combination of at least one uppercase letter, one lowercase letter, one digit, and one special character. This combination increases the password's entropy, making it harder to guess or crack.
--No Dictionary Words: Passwords cannot contain dictionary words, common phrases, or easily guessable information.
--Real-Time Feedback:Real-time feedback is provided as they type their passwords to guide users while creating passwords and ensure compliance with the password policy. This interactive feedback helps users understand whether their password meets the specified requirements. Here's how real-time feedback is integrated into the password creation process:
--Password Strength Meter: A password strength meter visually indicates the password's strength as users type their passwords. The meter's colour changes from red (weak) to yellow (moderate) to green (strong) based on the complexity of the password.
--Requirement Indicators: Besides the password input field, specific requirement indicators are displayed to show users which aspects of the policy their password satisfies. For example, the corresponding indicator becomes active if the user has entered an uppercase letter.
--Error Messages: If the user's password does not meet the policy requirements, descriptive error messages appear in real-time, explaining which specific criteria the password is missing. This empowers users to modify their passwords accordingly.
+- **Minimum Length:** Passwords must be at least 8 characters, ensuring adequate complexity.
+- **Complexity:** Passwords must include a combination of at least one uppercase letter, one lowercase letter, one digit, and one special character. This combination increases the password's entropy, making it harder to guess or crack.
+- **No Dictionary Words:** Passwords cannot contain dictionary words, common phrases, or easily guessable information.
+- **Real-Time Feedback:** Real-time feedback is provided as users type their passwords to guide them in creating passwords and ensure compliance with the password policy. This interactive feedback helps users understand whether their password meets the specified requirements.
+    - *Password Strength Meter:* A password strength meter visually indicates the password's strength as users type their passwords. The meter's color changes from red (weak) to yellow (moderate) to green (strong) based on the complexity of the password.
+    - *Requirement Indicators:* Beside the password input field, specific requirement indicators are displayed to show users which aspects of the policy their password satisfies. For example, the corresponding indicator becomes active if the user has entered an uppercase letter.
+    - *Error Messages:* If the user's password does not meet the policy requirements, descriptive error messages appear in real-time, explaining which specific criteria the password is missing. This empowers users to modify their passwords accordingly.
+
 
 
 
