@@ -164,6 +164,27 @@ By implementing these steps, the SQL injection vulnerability was successfully mi
 
 
 ## Password Policy Implementation
+To enhance the security of user accounts and prevent weak password usage, a comprehensive password policy was implemented within the application. This policy ensures that users create strong and secure passwords, reducing the risk of unauthorized access and data breaches.
+
+**Password Requirements:**
+
+The password policy enforces the following requirements for user passwords:
+-Minimum Length: Passwords must be at least 8 characters, ensuring adequate complexity.
+-Complexity: Passwords must include a combination of at least one uppercase letter, one lowercase letter, one digit, and one special character. This combination increases the password's entropy, making it harder to guess or crack.
+-No Dictionary Words: Passwords cannot contain dictionary words, common phrases, or easily guessable information.
+-Real-Time Feedback:Real-time feedback is provided as they type their passwords to guide users while creating passwords and ensure compliance with the password policy. This interactive feedback helps users understand whether their password meets the specified requirements. Here's how real-time feedback is integrated into the password creation process:
+-Password Strength Meter: A password strength meter visually indicates the password's strength as users type their passwords. The meter's colour changes from red (weak) to yellow (moderate) to green (strong) based on the complexity of the password.
+-Requirement Indicators: Besides the password input field, specific requirement indicators are displayed to show users which aspects of the policy their password satisfies. For example, the corresponding indicator becomes active if the user has entered an uppercase letter.
+-Error Messages: If the user's password does not meet the policy requirements, descriptive error messages appear in real-time, explaining which specific criteria the password is missing. This empowers users to modify their passwords accordingly.
+
+
+
+
+**Enforcement and User Experience:**
+The password policy is enforced during the initial account registration process and when users update their passwords. Users must create a password that adheres to the specified policy before proceeding. By providing real-time feedback and guidance, the application ensures that users understand and meet the password requirements without frustration.
+**Benefits:**
+The implementation of a firm password policy and real-time feedback system greatly enhances the security of user accounts. By guiding users to create complex passwords and educating them about password best practices, the application reduces the likelihood of successful brute-force attacks and unauthorized access. This proactive approach contributes to maintaining a high level of data protection and user confidence in the application's security.
+
 ## Audit Trail Implementation:
 
 
