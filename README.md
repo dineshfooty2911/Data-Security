@@ -11,8 +11,11 @@
 8. [Workflow](#workflow)
 9. [Security Measures Implemented](#security-measures-implemented)
 10. [Data Breaching and Security](#data-breaching-and-security)
-11. [Conclusion](#conclusion)
-12. [Reflection](#reflection)
+11. [Sql injection prevention](#Sql-injection-prevention)
+12. [Password Policy Implementation](#Password-Policy-Implementation)
+13. [Audit Trail Implementation](#Audit-Trail-Implementation)
+14. [Conclusion](#conclusion)
+
 
 ## Introduction
 This project aims to develop a web-based application that facilitates the management and booking of sports turfs. The project aims to provide an intuitive platform for users to register, log in, view available turfs, book time slots, and manage their bookings. The project emphasizes not only functional aspects but also robust security measures to ensure the integrity of user data and system functionality.
