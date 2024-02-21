@@ -47,13 +47,25 @@ This project aims to develop a web-based application that facilitates the manage
 - JavaScript
 
 ## Project Overview
-The "Sports Turf Management and Booking System" is a web-based application designed to streamline the process...
+The "Sports Turf Management and Booking System" is a web-based application designed to streamline the process of managing and booking sports turfs. With the growing popularity of various sports and recreational activities, there is a need for an efficient platform that allows users to easily find available turfs, book time slots, and manage their bookings. This project aims to address this need while strongly emphasizing cybersecurity and user data protection.
 
 ## Context and Significance
-In today's digital age, web applications have become integral to our daily lives...
+In today's digital age, web applications have become integral to our daily lives. From online shopping to social networking, these applications handle sensitive user information, making security a paramount concern. This project's significance lies in demonstrating the importance of incorporating robust security measures into web application development.The context of this project is rooted in the real-world scenario of sports turf management. Sports enthusiasts often face challenges in finding suitable turfs and booking them hassle-free. This application seeks to simplify this process, making it convenient for both turf owners and users seeking recreational opportunities.In addition to its functional goals, the project highlights the critical need for secure coding practices. By intentionally introducing security vulnerabilities and then rectifying them, the project serves as a hands-on educational tool to underscore the importance of writing code that is resistant to potential breaches. Through this project, users will gain an understanding of secure user authentication, data validation, and the implementation of password policies. Moreover, the inclusion of an audit trail mechanism provides insights into tracking user actions, further enhancing the application's accountability and security.By emphasizing security awareness and best practices, this project aims to empower developers and users alike to create and engage with web applications in a secure and responsible manner.
+
+
 
 ## Project Architecture
-The Sports Turf Management and Booking System is built using a client-server architecture...
+The Sports Turf Management and Booking System is built using a client-server architecture, incorporating various technologies to ensure a seamless and secure user experience. The architecture consists of three main components: the client interface, the server, and the database.
+
+Client Interface:
+The client interface is the application's front end that users interact with. It is developed using HTML, CSS, and JavaScript. The interface allows users to register, log in, search for available turfs, and book slots. The user inputs are validated in real-time to ensure data integrity and security. Additionally, password policy constraints are enforced during password creation.
+
+Server:
+The server is the application's core and is responsible for handling client requests, processing data, and interacting with the database. It is implemented using Node.js and Express.js. The server includes APIs for user registration, login, fetching available turfs, and booking slots. It enforces security measures such as input validation, parameterized queries, and protection against SQL injection.
+
+Database:
+The database stores user information, turf details, and booking records. It is implemented using MySQL. The database design includes user, owner, turf, and booking tables. The relationship between owners and turfs is established through foreign keys. This architecture ensures data consistency, integrity, and proper access control.
+
 
 ## Workflow
 User Registration and Login:
