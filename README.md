@@ -166,8 +166,6 @@ By implementing these steps, the SQL injection vulnerability was successfully mi
 ## Password Policy Implementation
 To enhance the security of user accounts and prevent weak password usage, a comprehensive password policy was implemented within the application. This policy ensures that users create strong and secure passwords, reducing the risk of unauthorized access and data breaches.
 
-**Password Requirements:**
-
 The password policy enforces the following requirements for user passwords:
 - **Minimum Length:** Passwords must be at least 8 characters, ensuring adequate complexity.
 - **Complexity:** Passwords must include a combination of at least one uppercase letter, one lowercase letter, one digit, and one special character. This combination increases the password's entropy, making it harder to guess or crack.
@@ -177,16 +175,40 @@ The password policy enforces the following requirements for user passwords:
     - *Requirement Indicators:* Beside the password input field, specific requirement indicators are displayed to show users which aspects of the policy their password satisfies. For example, the corresponding indicator becomes active if the user has entered an uppercase letter.
     - *Error Messages:* If the user's password does not meet the policy requirements, descriptive error messages appear in real-time, explaining which specific criteria the password is missing. This empowers users to modify their passwords accordingly.
 
-
-
-
-
 **Enforcement and User Experience:**
 The password policy is enforced during the initial account registration process and when users update their passwords. Users must create a password that adheres to the specified policy before proceeding. By providing real-time feedback and guidance, the application ensures that users understand and meet the password requirements without frustration.
 **Benefits:**
 The implementation of a firm password policy and real-time feedback system greatly enhances the security of user accounts. By guiding users to create complex passwords and educating them about password best practices, the application reduces the likelihood of successful brute-force attacks and unauthorized access. This proactive approach contributes to maintaining a high level of data protection and user confidence in the application's security.
 
 ## Audit Trail Implementation:
+# AUDIT TRAIL IMPLEMENTATION
+
+*An audit trail was implemented to ensure accountability, traceability, and transparency within the application. The audit trail captures and records significant actions and events performed by users and the system, providing a detailed history of activities for later analysis, investigation, and compliance purposes.*
+
+## *Logged Actions:*
+- **User Registration:** When a new user registers an account, their registration details, timestamp, and IP address are recorded.
+- **User Login:** Every user login attempt is logged, along with the timestamp and IP address, whether successful or unsuccessful.
+- **Password Changes:** If a user changes their password, the change is recorded, along with the previous and new password details.
+- **Turf Booking:** When a user books a turf slot, the booking details, selected turf, slot time, and user information are logged.
+- **Security Breach Attempts:** Any suspicious or unauthorized attempts to breach security (such as SQL injection attempts) are recorded.
+
+## *Storage and Structure:*
+- **Event ID:** A unique identifier for each event.
+- **Event Type:** Describes the type of event (e.g., registration, login, booking).
+- **Event Details:** Contains specific details about the event, such as user information, timestamps, and actions performed.
+- **User ID:** Identifies the user associated with the event.
+- **IP Address:** Captures the IP address from which the action was initiated.
+- **Timestamp:** Records the exact date and time when the event occurred.
+
+## *Logging Process:*
+*The logging process is integrated into critical application points, where actions are performed or events take place. When one of these events occurs, the relevant details are extracted and formatted into a log entry. This log entry is then added to the audit trail database table. For example, when a user registers an account, the application extracts the user's registration details, including the username, timestamp, and IP address. This information is formatted into a log entry and stored in the audit trail table. Similar processes occur for other events.*
+
+## *Access and Analysis:*
+*Access to the audit trail is typically restricted to authorized personnel responsible for monitoring and analyzing system activities. These individuals can query and analyze the audit trail to identify patterns, detect anomalies, investigate incidents, and ensure compliance with security policies.*
+
+## OUTCOME
+*By implementing an audit trail, the application maintains a comprehensive record of user interactions and system activities, promoting transparency, accountability, and the ability to respond effectively to security incidents or breaches.*
+
 
 
 ## Conclusion
