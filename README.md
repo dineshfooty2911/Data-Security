@@ -217,6 +217,6 @@ The implementation of a firm password policy and real-time feedback system great
 ## Conclusion
  A functional web application was successfully developed , allowing users to register, log in, view available turfs, and book slots. The application provides a user-friendly interface for a seamless experience. Various security measures were implemented to safeguard user data and ensure the confidentiality and integrity of information. These measures include user authentication, data validation, and password policy enforcement. To enhance accountability and traceability, an audit trail feature was incorporated that logs user actions within the application. This helps in identifying any suspicious activities and maintaining data integrity.
 
-
+Hi Dinesh
 
 
